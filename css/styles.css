@@ -110,6 +110,29 @@ h2 {
     margin-right: 90px;
 }
 
+
+.header-link-current{
+    position: relative;
+    color: var(--blue-color-text);
+}
+
+.header-link-current::after {
+    content:"";
+    
+    position: absolute;
+    bottom: -32px;
+    left: 0 ;
+
+    display: block;
+    height: 4px;
+    width: 100%;
+
+    background-color: #2196F3;
+    border-radius: 2px ;
+
+}
+
+
 .header-nav {
     margin-right: auto;
 }
@@ -122,13 +145,6 @@ h2 {
     color: var(--black-color-text);
 }
 
-.header-studio {
-    color: var(--blue-color-text);
-}
-
-.header-portfolio {
- color: var(--blue-color-text);
-}
 
 .header-item:hover,
 .header-link:focus {
