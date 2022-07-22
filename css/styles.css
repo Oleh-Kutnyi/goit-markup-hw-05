@@ -144,6 +144,12 @@ h2 {
     letter-spacing: 0.02em;
     color: var(--title-color);
     margin-right: 50px;
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+
 }
 
 .header-item:last-child {
@@ -164,6 +170,10 @@ h2 {
     color: var(--text-color);
     margin-right: 50px;
 
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
 
@@ -172,6 +182,25 @@ h2 {
 .header-contacts:focus{
      color: var(--blue-color-text);
 }
+
+
+.header-contacts:hover .header-icon{
+    fill: var(--blue-color-text);
+}
+
+.header-contacts:focus .header-icon {
+    fill: var(--blue-color-text);
+}
+
+/* Header Icons */
+
+.header-icon {
+    fill: #757575;
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 
 
 /* Main(Index.HTML)*/
@@ -402,12 +431,16 @@ h2 {
         line-height: 1.6;
         text-align: center;
         letter-spacing: 0.03em;
-        background: var(--team-background-color);
+        background-color: var(--team-background-color);
         border-radius: 4px;
         color: var(--title-color);
         cursor: pointer;
         border: 0px;
         padding: 6px 22px;
+
+        transition-property: color, background-color, border, box-shadow;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
         
 }
 
@@ -423,7 +456,7 @@ h2 {
 .btn-prtf:active,
 .btn-prtf:focus {
     color: var(--pure-white-color);
-    background: var(--blue-color-text);
+    background-color: var(--blue-color-text);
     border: var(--blue-color-text) 4px;
     box-shadow: 
     0px 3px 1px rgba(0, 0, 0, 0.1), 
@@ -434,9 +467,15 @@ h2 {
  /* < !-- Portfolio Interective Images List --> */
 
 .prtf-ii-list {
-    --items: 9 ; 
+    --items: 9 ;
+    
 }
 
+.prtf-ii-link {
+    transition-property: box-shadow;
+    transition-duration:250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
 
 .prtf-ii-link:hover {
     box-shadow: 
@@ -532,7 +571,11 @@ color: var(--pure-white-color);
     font-size: 14px;
     line-height: 1.7;
     letter-spacing: 0.03em;
-    color: rgba(255, 255, 255, 0.6);   
+    color: rgba(255, 255, 255, 0.6); 
+    
+    transition-property: color;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-list-item {
@@ -583,10 +626,18 @@ color: var(--pure-white-color);
     background-color: var(--pure-white-color);
     border-radius: 50%;
 
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
 .social-team-icon {
     fill: var(--logo-color--);
+    
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-team-link:hover {
@@ -638,6 +689,11 @@ color: var(--pure-white-color);
             background-color: var(--pure-white-color);
             border-radius: 50%;
             background: rgba(255, 255, 255, 0.1);
+           
+            transition-property: background-color;
+            transition-duration: 250ms;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            
 }
 
 /* Client Icons */
@@ -651,6 +707,9 @@ color: var(--pure-white-color);
 
 .client-icon {
     fill: var(--logo-color--) ;
+        transition-property: fill;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .client-link {
@@ -662,6 +721,11 @@ color: var(--pure-white-color);
             height: 92px;
             border: 1px solid #AFB1B8;
             border-radius: 4px;
+
+
+        transition-property: background-color;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -703,16 +767,6 @@ color: var(--pure-white-color);
     background-color: var(--team-background-color);
 }  
 
-/* Header Icons */
-
-.header-icon {
-    fill: #757575;
-}
-
-.header-icon:hover, :focus {
-    fill: var(--blue-color-text);
-}
-
 
 /* --- */
 /* Modal Window */
@@ -749,6 +803,8 @@ color: var(--pure-white-color);
     0px 1px 1px rgba(0, 0, 0, 0.14), 
     0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
+
+
 }
 
 .modal-btn {
@@ -770,8 +826,4 @@ color: var(--pure-white-color);
    background-color: transparent;
    
    cursor: pointer;
-}
-
-.modal-btn-icon {
-
 }
