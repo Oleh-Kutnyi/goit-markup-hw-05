@@ -222,10 +222,11 @@ h2 {
 
 .hero-img {
         background-image: url(../images/hero-img/Img.png);
-            background-repeat: no-repeat;
-            background-position: center;
-            margin-right: auto;
-            margin-left: auto;
+        background-repeat: no-repeat;
+        background-position: center;
+        margin-right: auto;
+        margin-left: auto;
+        height: 600px;
 
 }
 
@@ -330,22 +331,20 @@ h2 {
 
 .box-item-title {
     font-size: 14px;
-        line-height: 16px;
-        text-align: center;
-        letter-spacing: 0.03em;
-        text-transform: uppercase;
+    line-height: 1.14;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
     
-        color: #FFFFFF;
-        background: rgba(47, 48, 58, 0.8);
-        padding: 27px 82px;
-        width: 100%;
+    color: #FFFFFF;
+    background: rgba(47, 48, 58, 0.8);
+    padding: 27px 82px;
+    width: 100%;
 
-
-        z-index: 120;
-        position: absolute;
-        bottom: 0;
+    z-index: 120;
+    position: absolute;
+    bottom: 0;
         
-
 }
 
 /* Team Section */
@@ -539,6 +538,21 @@ h2 {
     color:var(--text-color);
 }
 
+
+.prtf-overlay {
+
+}
+
+.prtf-overlay-text {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.55;
+    letter-spacing: 0.03em;
+    
+    color: #FFFFFF;
+}
 
 
 
@@ -805,11 +819,21 @@ color: var(--pure-white-color);
     width: 100%;
     z-index: 1000;
 
-    display: flex;
+    /* display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center; */
 
     background-color: rgba(0, 0, 0, 0.2);
+
+
+
+opacity: 1;
+visibility: visible;
+pointer-events: initial;
+
+transition: opacity 600ms ease-out, visibility 600ms ease-out;
+
+
 }
 
 
@@ -820,7 +844,14 @@ color: var(--pure-white-color);
 }
 
 .modal {
-    position: relative;
+    /* position: relative; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%,-50%) scale(1) rotate(0);
+
+
     width: 520px;
     height: 580px;
     background-color: #FFFFFF;
@@ -830,8 +861,17 @@ color: var(--pure-white-color);
     0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
 
+    opacity: 1;
+    transition: transform 400ms ease-in-out 200ms, opacity 400ms ease-in-out 200ms
 
 }
+
+.backdrop.is-hidden .modal {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.4) rotate(0);
+}
+
+
 
 .modal-btn {
 
