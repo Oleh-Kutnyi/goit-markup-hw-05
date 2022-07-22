@@ -75,7 +75,7 @@
         <section class="hero-section hero-img ">
             <div class="container hero-container">
             <h1 class="hero-title hero-container"> Эффективные решения <br>для вашего бизнеса </h1>
-            <button type="button" class="hero-btn"> Заказать услугу </button>
+            <button type="button" class="hero-btn" data-modal-open > Заказать услугу </button>
             </div>
         </section>
                 <!-- Underbox -->
@@ -607,6 +607,21 @@
  </div>
     </footer>
 
+    <!-- Modal Window -->
+
+    <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+            <button class="modal-btn" data-modal-close>
+                   <svg class="modal-btn-icon" width="20" height="20">
+                        <use href="./images/icons.svg#xmark">
+                        </use>
+                   </svg>
+            </button>
+        </div>
+
+    </div>
+
+    <script src="./js/modal.js"></script>
 </body>
 
 </html>
